@@ -562,6 +562,55 @@ const DW_A4=[
 ];
 
 // 단원 데이터 구조 초기화
+// ── 공직영어시험특강 기본 단어 ──
+// 1단원: Corporate Structure (책 11단원)
+const DW_B1=[
+  {term:"corporate structure",def:"기업 구조",ex:"Most corporate structures have three levels: executive, middle, and lower management.",isDefault:true},
+  {term:"executive",def:"임원, 경영진 / 임원의",ex:"The executives met to discuss the company's new strategy.",isDefault:true},
+  {term:"inside director",def:"내부 이사",ex:"Inside directors are employed by the company they serve.",isDefault:true},
+  {term:"outside director",def:"외부 이사",ex:"Outside directors are not employed by the company.",isDefault:true},
+  {term:"CEO",def:"최고경영자 (Chief Executive Officer)",ex:"The CEO is responsible for the overall direction of the company.",isDefault:true},
+  {term:"CFO",def:"최고재무책임자 (Chief Financial Officer)",ex:"The CFO oversees the company's financial planning and reporting.",isDefault:true},
+  {term:"COO",def:"최고운영책임자 (Chief Operating Officer)",ex:"The COO manages the day-to-day operations of the business.",isDefault:true},
+  {term:"chair",def:"의장, 회장",ex:"The chair of the board presided over the annual meeting.",isDefault:true},
+  {term:"board of directors",def:"이사회",ex:"The board of directors elects the CEO.",isDefault:true},
+  {term:"elect",def:"선출하다, 선임하다",ex:"A company's Board of Directors elects its chairs.",isDefault:true},
+  {term:"president",def:"사장, 대표이사",ex:"The president reports directly to the CEO.",isDefault:true},
+  {term:"vice president",def:"부사장",ex:"The vice president oversees several departments.",isDefault:true},
+];
+
+// 2단원: Communication Skills (책 12단원)
+const DW_B2=[
+  {term:"verbal",def:"언어적인, 구두의",ex:"Employers seek MBA graduates with strong verbal skills.",isDefault:true},
+  {term:"written",def:"서면의, 글로 쓴",ex:"Written content needs to be presented clearly for the audience.",isDefault:true},
+  {term:"pretentious",def:"허세 부리는, 과시적인",ex:"Employers evaluate candidates on their ability to avoid pretentious language.",isDefault:true},
+  {term:"casual prose",def:"격식 없는 문체",ex:"Wordy or casual prose is usually unacceptable in business writing.",isDefault:true},
+  {term:"put on the spot",def:"곤란하게 만들다, 즉석에서 답하게 하다",ex:"When put on the spot, MBAs should demonstrate confidence.",isDefault:true},
+  {term:"concisely",def:"간결하게",ex:"Ideas need to be presented clearly and concisely.",isDefault:true},
+  {term:"correspondence",def:"서신, 편지 / 연락",ex:"Employers often complain of receiving poor correspondence.",isDefault:true},
+  {term:"demonstrate",def:"보여주다, 증명하다",ex:"Candidates should demonstrate confidence during the interview.",isDefault:true},
+  {term:"confidence",def:"자신감, 확신",ex:"Good listeners need to learn how to listen with confidence.",isDefault:true},
+  {term:"adjust",def:"조정하다, 맞추다",ex:"Written content needs to be adjusted for the audience.",isDefault:true},
+  {term:"effective",def:"효과적인",ex:"Effective communication is important to business performance.",isDefault:true},
+  {term:"merely",def:"단지, 그저",ex:"Good listeners do not merely wait their turn to speak.",isDefault:true},
+];
+
+// 3단원: Information Technology (책 13단원)
+const DW_B3=[
+  {term:"digital",def:"디지털의",ex:"In the 1990s, there was a digital revolution in business.",isDefault:true},
+  {term:"software",def:"소프트웨어",ex:"Software made immediate communication a reality.",isDefault:true},
+  {term:"database",def:"데이터베이스",ex:"Information technology stored information in databases.",isDefault:true},
+  {term:"live chat",def:"실시간 채팅",ex:"Our company now uses a live chat connection instead of a traditional phone line.",isDefault:true},
+  {term:"video conference",def:"화상 회의",ex:"Video conferences allow meetings without requiring physical presence.",isDefault:true},
+  {term:"immediate",def:"즉각적인, 즉시의",ex:"The new millennium brought immediate communication as a reality.",isDefault:true},
+  {term:"CRM system",def:"고객 관계 관리 시스템 (Customer Relationship Management)",ex:"The CRM system helps retailers offer better customer service.",isDefault:true},
+  {term:"POS system",def:"판매 시점 관리 시스템 (Point of Sale)",ex:"The POS system helps companies maintain inventory.",isDefault:true},
+  {term:"MIS",def:"경영 정보 시스템 (Management Information System)",ex:"MIS keeps records of expenses, sales, and productivity.",isDefault:true},
+  {term:"retail",def:"소매 / 소매의",ex:"The retail industry offers the best example of information technology use.",isDefault:true},
+  {term:"revolution",def:"혁명, 대변혁",ex:"In the 1990s, there was a digital revolution in business.",isDefault:true},
+  {term:"productivity",def:"생산성",ex:"MIS keeps records of expenses, sales, and productivity.",isDefault:true},
+];
+
 function makeUnits(defaults){
   const u={};
   for(let i=1;i<=6;i++) u[i]={defaultWords:defaults[i]||[],customWords:[]};
@@ -569,7 +618,7 @@ function makeUnits(defaults){
 }
 const UNIT_DATA={
   a: makeUnits({4:DW_A4}),
-  b: makeUnits({}),
+  b: makeUnits({1:DW_B1, 2:DW_B2, 3:DW_B3}),
 };
 
 // ══ 앱 상태 ══
